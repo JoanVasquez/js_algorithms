@@ -23,10 +23,22 @@ CREATE A FUNCTION NAMED countUniqueValues WHICH TAKES AN ARRAY AS PARAMETER
     RETURN RESULT LENGTH
 */
 
-function countUniqueValues(arr) {
+/*function countUniqueValues(arr) {
     var result = [];
     for(var num of arr) 
         if(!result.includes(num)) result.push(num);
     
     return result.length;
+}*/
+
+function countUniqueValues(arr) {
+    if(arr.length === 0) return 0;
+    var i = 0;
+    for(var j = 1; j < arr.length; j++) {
+        if(arr[i] !== arr[j]) {
+            i++;
+            arr[i] = arr[j]
+        }
+    }
+    return i + 1;
 }
