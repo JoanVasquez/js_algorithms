@@ -7,7 +7,7 @@ EXAMPLE
 1 2 2 => true
 */
 
-function areThereDuplicate() {
+function areThereDuplicates() {
 
     let argsMap = createMap([...arguments]);
 
@@ -24,4 +24,9 @@ function createMap(args) {
         counter[char] = ++counter[char] || 1;
     }
     return counter;
+}
+
+
+function areThereDuplicatesOneLine() {
+    return new Set(arguments).size !== arguments.length;
 }
