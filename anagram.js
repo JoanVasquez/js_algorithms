@@ -57,7 +57,7 @@ function buildCharMap(str) {
 
 //O(1)
 
-function isPalindrome(str1, str2) {
+function isAnagram(str1, str2) {
     return strClean(str1) === strClean(str2);
 }
 
